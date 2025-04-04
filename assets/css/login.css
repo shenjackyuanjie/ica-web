@@ -25,13 +25,13 @@ body {
 }
 
 input {
-    width: calc(100% - 2px); /* 精确计算宽度 */
+    width: calc(100% - 2px);
     padding: 10px 12px;
     border: 1px solid var(--color-input-border);
-    border-radius: 6px; /* 增大圆角 */
+    border-radius: 4px;
     background-color: var(--color-input-bg);
     color: var(--color-text-primary);
-    box-sizing: border-box; /* 关键修复 */
+    box-sizing: border-box;
     transition: all 0.3s ease;
 }
 
