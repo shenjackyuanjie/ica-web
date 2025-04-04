@@ -4,7 +4,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding: 20px;
+    padding: 1rem; /* 改用相对单位 */
     transition: background-color 0.3s ease;
 }
 
@@ -14,26 +14,25 @@ body {
     border-radius: 8px;
     box-shadow: var(--shadow-default);
     width: 100%;
-    max-width: 300px;
-    transition:
-        background-color 0.3s ease,
-        box-shadow 0.3s ease;
+    max-width: 360px; /* 增加容器最大宽度 */
+    box-sizing: border-box; /* 新增 */
+    transition: all 0.3s ease;
 }
 
 .form-group {
     margin-bottom: 1.5rem;
+    padding: 0 0.5rem; /* 添加水平内边距 */
 }
 
 input {
-    width: 100%;
-    padding: 10px;
+    width: calc(100% - 2px); /* 精确计算宽度 */
+    padding: 10px 12px;
     border: 1px solid var(--color-input-border);
-    border-radius: 4px;
+    border-radius: 6px; /* 增大圆角 */
     background-color: var(--color-input-bg);
     color: var(--color-text-primary);
-    transition:
-        border-color 0.3s ease,
-        background-color 0.3s ease;
+    box-sizing: border-box; /* 关键修复 */
+    transition: all 0.3s ease;
 }
 
 input::placeholder {
