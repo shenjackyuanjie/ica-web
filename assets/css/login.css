@@ -2,51 +2,62 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: #f0f2f5;
-    margin: 0;
     min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .login-container {
-    background: white;
+    background: var(--color-bg-container);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    width: 300px;
-    transition: all 0.3s ease;
+    box-shadow: var(--shadow-default);
+    width: 100%;
+    max-width: 300px;
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
+    padding: 10px;
+    border: 1px solid var(--color-input-border);
     border-radius: 4px;
-    box-sizing: border-box;
+    background-color: var(--color-input-bg);
+    color: var(--color-text-primary);
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+input::placeholder {
+    color: var(--color-text-secondary);
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
+    padding: 12px;
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--color-button-hover);
 }
 
 .error {
-    color: red;
+    color: var(--color-error);
     font-size: 0.8rem;
-    margin-top: 5px;
+    margin-top: 8px;
+    min-height: 1em;
 }
