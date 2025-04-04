@@ -23,7 +23,7 @@
     // 更新切换按钮
     function updateToggleButton(theme) {
         toggleButton.textContent = theme === 'dark' ? '🌞' : '🌙';
-        toggleButton.style.backgroundColor = `var(--color-button-${theme})`;
+        toggleButton.style.backgroundColor = `var(--color-button-bg)`;
     }
 
     // 创建切换按钮
