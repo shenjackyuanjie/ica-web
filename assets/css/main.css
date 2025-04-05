@@ -12,6 +12,10 @@ body {
 }
 
 /* 顶栏样式 */
+.top-bar {
+    background: var(--panel-header-bg);
+}
+
 .text-actions {
     display: flex;
     gap: 16px;
@@ -31,12 +35,11 @@ body {
 /* 左侧边栏 */
 .left-sidebar {
     width: 65px;
-    background: var(--color-bg-sidebar);
-    border-right: 1px solid var(--color-border);
+    background: var(--panel-sidebar-bg);
     display: flex;
     flex-direction: column;
     overflow: overlay;
-    display: block;
+    align-items: center;
 }
 
 /* 用户头像 */
@@ -53,11 +56,11 @@ body {
     height: 80px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid var(--color-avatar-border);
+    border: 2px solid var(--panel-color-icon);
 }
-/* 聊天分组 */
 
-.group-list {
+/* 聊天分组 */
+.chat-groups {
     display: block;
 }
 
@@ -75,14 +78,10 @@ body {
     align-items: center;
 }
 
-.group-item:hover {
-    background: var(--color-hover-bg);
-}
 
 .group-icon {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     position: relative;
 }
 
@@ -94,9 +93,10 @@ body {
     transform: translate(-50%, -50%);
     width: 24px;
     height: 24px;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M273.536 736H800a64 64 0 0 0 64-64V256a64 64 0 0 0-64-64H224a64 64 0 0 0-64 64v570.88zM296 800 147.968 918.4A32 32 0 0 1 96 893.44V256a128 128 0 0 1 128-128h576a128 128 0 0 1 128 128v416a128 128 0 0 1-128 128z"/></svg>');
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: var(--panel-color-icon);
+    mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M273.536 736H800a64 64 0 0 0 64-64V256a64 64 0 0 0-64-64H224a64 64 0 0 0-64 64v570.88zM296 800 147.968 918.4A32 32 0 0 1 96 893.44V256a128 128 0 0 1 128-128h576a128 128 0 0 1 128 128v416a128 128 0 0 1-128 128z"/></svg>');
+    mask-size: contain;
+    mask-repeat: no-repeat;
 }
 
 /* 主内容区域 */
@@ -108,21 +108,22 @@ body {
 /* 聊天列表 */
 .chat-list {
     width: 300px;
-    border-right: 1px solid var(--color-border);
+    border-right: var(--chat-border-style);
     overflow-y: auto;
-    background: var(--color-bg-container);
+    background: var(--panel-item-bg);
 }
 
 .chat-item {
     padding: 15px;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: var(--chat-border-style);
     cursor: pointer;
     color: var(--color-text-primary);
     transition: background-color 0.3s ease;
+    background: var(--chat-sidemenu-bg-color);
 }
 
 .chat-item:hover {
-    background: var(--color-hover-bg);
+    background: var(--chat-sidemenu-bg-color-hover);
 }
 
 /* 主体聊天框 */
@@ -130,7 +131,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background: var(--color-bg-container);
+    background: var(--chat-content-bg-color);
 }
 
 /* 消息显示区域 */
@@ -138,42 +139,46 @@ body {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
-    background: var(--color-bg-container);
+    background: var(--chat-content-bg-color);
 }
 
 .message {
     padding: 10px;
     margin: 8px 0;
     border-radius: 8px;
-    background: var(--color-message-bg);
+    background: var(--chat-message-bg-color);
     max-width: 70%;
-    color: var(--color-text-primary);
+    color: var(--chat-message-color);
 }
 
 /* 消息输入区域 */
 .message-input {
     height: 100px;
-    border-top: 1px solid var(--color-border);
+    border-top: var(--chat-border-style);
     padding: 15px;
-    background: var(--color-bg-container);
+    background: var(--chat-footer-bg-color);
 }
 
 .input-box {
     width: 100%;
     height: 100%;
     padding: 10px;
-    border: 1px solid var(--color-input-border);
+    border: var(--chat-border-style-input);
     border-radius: 5px;
     resize: none;
-    background: var(--color-input-bg);
-    color: var(--color-input-text);
+    background: var(--chat-bg-color-input);
+    color: var(--chat-color);
     transition: all 0.3s ease;
+}
+
+.input-box:focus {
+    border-color: var(--chat-border-color-input-selected);
 }
 
 /* 按钮样式 */
 button {
     background-color: var(--color-button-bg);
-    color: var(--color-button-text, #ffffff); /* 使用备用值 */
+    color: var(--color-button-text);
     border: none;
     padding: 8px 16px;
     border-radius: 4px;

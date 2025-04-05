@@ -36,8 +36,10 @@
     --chat-sidemenu-bg-color-active: #e5effa;
     --chat-sidemenu-color-active: #1976d2;
     --chat-sidemenu-border-color-search: #e1e5e8;
+    
     --chat-dropdown-bg-color: #fff;
     --chat-dropdown-bg-color-hover: #f6f6f6;
+
     --chat-message-bg-color: #fff;
     --chat-message-bg-color-me: #ccf2cf;
     --chat-message-color-started: #9ca6af;
@@ -81,7 +83,9 @@
     --chat-room-color-offline: #9ca6af;
     --chat-room-bg-color-badge: #0696c7;
     --chat-room-color-badge: #fff;
+
     --chat-emoji-bg-color: #fff;
+
     --chat-icon-color-search: #9ca6af;
     --chat-icon-color-add: #1976d2;
     --chat-icon-color-toggle: #0a0a0a;
@@ -106,6 +110,7 @@
     --chat-icon-color-dropdown-scroll: #0a0a0a;
     --chat-icon-color-microphone: #1976d2;
     --chat-icon-color-microphone-off: #eb4034;
+
     --panel-background: #ffffff;
     --panel-color-name: #303133;
     --panel-color-username: #1976d2;
@@ -162,9 +167,11 @@
     --chat-sidemenu-bg-color-hover: #202224;
     --chat-sidemenu-bg-color-active: #151617;
     --chat-sidemenu-color-active: #fff;
-    --chat-sidemenu-border-color-search: #181a1b;
+    --chat-sidemenu-border-color-search: #181a1b
+    ;
     --chat-dropdown-bg-color: #2a2c33;
     --chat-dropdown-bg-color-hover: #26282e;
+
     --chat-message-bg-color: #22242a;
     --chat-message-bg-color-me: #1f7e80;
     --chat-message-color-started: #9ca6af;
@@ -197,10 +204,12 @@
     --chat-message-bg-color-reaction-hover-me: #4e9ad1;
     --chat-message-border-style-reaction-hover-me: none;
     --chat-message-color-reaction-counter-me: #fff;
+
     --chat-markdown-bg: rgba(239, 239, 239, 0.7);
     --chat-markdown-border: rgba(212, 212, 212, 0.9);
     --chat-markdown-color: #e01e5a;
     --chat-markdown-color-multi: #0a0a0a;
+
     --chat-room-color-username: #fff;
     --chat-room-color-message: #6c7278;
     --chat-room-color-timestamp: #6c7278;
@@ -208,7 +217,9 @@
     --chat-room-color-offline: #596269;
     --chat-room-bg-color-badge: #1976d2;
     --chat-room-color-badge: #fff;
+
     --chat-emoji-bg-color: #343740;
+
     --chat-icon-color-search: #596269;
     --chat-icon-color-add: #fff;
     --chat-icon-color-toggle: #fff;
@@ -233,6 +244,7 @@
     --chat-icon-color-dropdown-scroll: #0a0a0a;
     --chat-icon-color-microphone: #fff;
     --chat-icon-color-microphone-off: #eb4034;
+
     --panel-background: #0D0E0F;
     --panel-color-name: #F2F6FC;
     --panel-color-username: #52a3e8;
@@ -253,11 +265,6 @@ body {
     background-color: var(--color-bg-body);
     color: var(--color-text-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.login-container {
-    background-color: var(--color-bg-container);
-    box-shadow: 0 2px 10px var(--color-shadow);
 }
 
 input {
