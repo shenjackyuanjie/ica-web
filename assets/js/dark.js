@@ -28,20 +28,8 @@
 
     // 创建切换按钮
     const toggleButton = document.createElement('button');
-    toggleButton.id = 'theme-toggle';
+    toggleButton.className = 'theme-toggle';
     toggleButton.type = 'button';
-    Object.assign(toggleButton.style, {
-        position: 'fixed',
-        bottom: '20px',
-        right: '20px',
-        width: '40px',
-        height: '40px',
-        borderRadius: '50%',
-        border: 'none',
-        cursor: 'pointer',
-        zIndex: '1000',
-        transition: 'all 0.3s ease'
-    });
 
     // 初始化
     function init() {
