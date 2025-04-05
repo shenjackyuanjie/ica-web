@@ -1,6 +1,5 @@
 :root {
-    /* 明亮主题
-    源码来自: icalingua*/
+    /* 明亮主题 */
     --color-bg-body: #f0f2f5;
     --color-bg-container: #ffffff;
     --color-text-primary: #333333;
@@ -12,6 +11,7 @@
     --color-error: #ff0000;
     --color-shadow: rgba(0,0,0,0.1);
 
+    /* 源码来自: icalingua */
     --chat-color: #0a0a0a;
     --chat-bg-color-input: #fff;
     --chat-color-spinner: #333;
@@ -123,8 +123,7 @@
 }
 
 [data-theme="dark"] {
-    /* 暗黑主题 
-    源码来自: icalingua*/
+    /* 暗黑主题 */
     --color-bg-body: #121212;
     --color-bg-container: #1e1e1e;
     --color-input-border: #3d3d3d;
@@ -139,6 +138,7 @@
     --color-text-secondary: #909090;
     --color-theme-switch-btn-bg: #1e1e1e;
 
+    /* 源码来自: icalingua */
     --chat-color: #fff;
     --chat-bg-color-input: #202223;
     --chat-color-spinner: #fff;
