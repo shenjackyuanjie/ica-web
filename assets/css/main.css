@@ -70,32 +70,26 @@ body {
     text-align: center;
     margin-top: 20px;
     cursor: pointer;
-    min-height: 32px;
-    color: var(--color-text-primary);
+    min-height: 39px;
+    color: #eee;
     transition: all 0.3s;
     font-size: 12px;
     word-break: break-all;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
 .group-icon {
-    width: 40px;
-    height: 40px;
     position: relative;
 }
 
 .group-icon::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     width: 24px;
     height: 24px;
-    background-color: var(--panel-color-icon);
+    background-color: #eee;
     mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M273.536 736H800a64 64 0 0 0 64-64V256a64 64 0 0 0-64-64H224a64 64 0 0 0-64 64v570.88zM296 800 147.968 918.4A32 32 0 0 1 96 893.44V256a128 128 0 0 1 128-128h576a128 128 0 0 1 128 128v416a128 128 0 0 1-128 128z"/></svg>');
     mask-size: contain;
     mask-repeat: no-repeat;
@@ -125,6 +119,7 @@ body {
     background: var(--chat-sidemenu-bg-color-hover);
 }
 
+/* 群显示左侧 */
 .chat-left {
     display: block;
     position: relative;
@@ -144,6 +139,10 @@ body {
     right: -2px;
     line-height: 20px;
     position: absolute;
+}
+
+.chat-right {
+    margin-left: 11px;
 }
 
 /* 主体聊天框 */
