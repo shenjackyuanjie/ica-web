@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* 顶栏样式 */
+.text-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.action-item {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.action-item:hover {
+    color: var(--color-primary);
+}
+
+/* 左侧边栏 */
+.left-sidebar {
+    width: 65px;
+    background: var(--color-bg-sidebar);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    overflow: overlay;
+    display: block;
+}
+
+/* 用户头像 */
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.avatar-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--color-avatar-border);
+}
+/* 聊天分组 */
+
+.group-list {
+    display: block;
+}
+
+.group-item {
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    min-height: 32px;
+    color: var(--color-text-primary);
+    transition: all 0.3s;
+    font-size: 12px;
+    word-break: break-all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.group-item:hover {
+    background: var(--color-hover-bg);
+}
+
+.group-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.group-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M273.536 736H800a64 64 0 0 0 64-64V256a64 64 0 0 0-64-64H224a64 64 0 0 0-64 64v570.88zM296 800 147.968 918.4A32 32 0 0 1 96 893.44V256a128 128 0 0 1 128-128h576a128 128 0 0 1 128 128v416a128 128 0 0 1-128 128z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* 主内容区域 */
+.main-content {
+    flex: 1;
+    display: flex;
+}
+
+/* 聊天列表 */
+.chat-list {
+    width: 300px;
+    border-right: 1px solid var(--color-border);
+    overflow-y: auto;
+    background: var(--color-bg-container);
+}
+
+.chat-item {
+    padding: 15px;
+    border-bottom: 1px solid var(--color-border);
+    cursor: pointer;
+    color: var(--color-text-primary);
+    transition: background-color 0.3s ease;
+}
+
+.chat-item:hover {
+    background: var(--color-hover-bg);
+}
+
+/* 主体聊天框 */
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg-container);
+}
+
+/* 消息显示区域 */
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: var(--color-bg-container);
+}
+
+.message {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    background: var(--color-message-bg);
+    max-width: 70%;
+    color: var(--color-text-primary);
+}
+
+/* 消息输入区域 */
+.message-input {
+    height: 100px;
+    border-top: 1px solid var(--color-border);
+    padding: 15px;
+    background: var(--color-bg-container);
+}
+
+.input-box {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-input-border);
+    border-radius: 5px;
+    resize: none;
+    background: var(--color-input-bg);
+    color: var(--color-input-text);
+    transition: all 0.3s ease;
+}
+
+/* 按钮样式 */
+button {
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text, #ffffff); /* 使用备用值 */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* 布局容器 */
+.container {
+    display: flex;
+    flex: 1;
+}

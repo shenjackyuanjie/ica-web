@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网页聊天室</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+</head>
+
+<body>
+    <script src="/assets/js/dark.js"></script>
+    <!-- 顶栏 -->
+    <div class="top-bar">
+        <h1 class="window-title">Icalingua-web</h1>
+        <div class="text-actions">
+            <span class="action-item">操作1</span>
+            <span class="action-item">操作2</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="left-sidebar">
+            <!-- 头像 -->
+            <div class="user-avatar">
+                <img class="avatar-img" src="your-avatar.jpg" alt="用户头像">
+            </div>
+
+            <!-- 群组列表 -->
+            <div class="chat-groups">
+                <!-- 统一图标结构 -->
+                <div class="group-item">
+                    <div class="group-icon"></div>
+                    家庭群
+                </div>
+                <div class="group-item">
+                    <div class="group-icon"></div>
+                    工作群
+                </div>
+                <div class="group-item">
+                    <div class="group-icon"></div>
+                    设置
+                </div>
+            </div>
+        </aside>
+        <!-- 聊天列表 -->
+        <section class="chat-list">
+            <div class="chat-item">对话1</div>
+            <div class="chat-item">对话2</div>
+            <div class="chat-item">对话3</div>
+        </section>
+
+        <!-- 主体聊天框 -->
+        <main class="chat-container">
+            <div class="messages">
+                <!-- 这里放置聊天消息 -->
+                <div class="message">示例消息1</div>
+                <div class="message">示例消息2</div>
+            </div>
+            <div class="message-input">
+                <textarea class="input-box" placeholder="输入消息..."></textarea>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // 简单的发送消息功能示例
+        const inputBox = document.querySelector(".input-box");
+        inputBox.addEventListener("keypress", (e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                const message = inputBox.value.trim();
+                if (message) {
+                    // 这里添加发送消息的逻辑
+                    console.log("发送消息:", message);
+                    inputBox.value = "";
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

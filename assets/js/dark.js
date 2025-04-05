@@ -29,6 +29,7 @@
     // 创建切换按钮
     const toggleButton = document.createElement('button');
     toggleButton.id = 'theme-toggle';
+    toggleButton.type = 'button';
     Object.assign(toggleButton.style, {
         position: 'fixed',
         bottom: '20px',
