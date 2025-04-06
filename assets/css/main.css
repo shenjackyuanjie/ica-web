@@ -133,7 +133,7 @@ body {
     border-radius: 10%;
 }
 
-.chat-sender {
+.chat-sender-icon {
     width: 20px;
     height: 20px;
     bottom: -2px;
@@ -205,6 +205,20 @@ body {
     color: var(--panel-color-timestamp);
     margin-left: 5px;
     white-space: nowrap;
+}
+
+.chat-right-lower {
+    display: flex;
+    height: 18px;
+}
+
+.chat-sender {
+    color: var(--panel-color-desc);
+    font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1;
 }
 
 /* 主体聊天框 */
